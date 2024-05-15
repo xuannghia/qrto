@@ -8,10 +8,8 @@ npm install xqrcode
 
 ## `toSVG`
 
-
-<img src="output-1.svg" height="160" />
-<img src="output-2.svg" height="160" />
-<img src="output-3.svg" height="160" />
+| <img src="output-1.svg" height="160" /> | <img src="output-2.svg" height="160" /> | <img src="output-3.svg" height="160" /> |
+|---|---|---|
 
 ### NodeJS
 
