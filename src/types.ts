@@ -86,7 +86,7 @@ export type BaseOptions = {
    */
   logo?: {
     url: string
-    /** @default 40 */ 
+
     size?: number
     /** @default 'circle' */
     style?: "square" | "circle" | "round"

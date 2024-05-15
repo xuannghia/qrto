@@ -41,14 +41,15 @@ function buildGradient(id: string, color: QRColorGradient): string {
   return svg
 }
 
-function getLogoInfo(logo: BaseOptions['logo'], svgSize: number) {
-  const size = logo?.size ?? 30
+function getLogoInfo({ options, pixelSize, svgSize }: { options?: BaseOptions, pixelSize: number, svgSize: number }) {
+  if (!options || !options.logo?.url) return null
+  const size = options.logo?.size ?? toFixed(pixelSize * 4)
   const x = (svgSize - size) / 2
-  const p = logo?.padding ?? 2
+  const p = options.logo?.padding ?? 2
   let r = 0
-  if (!logo?.style || logo?.style === 'circle') {
+  if (!options.logo?.style || options.logo?.style === 'circle') {
     r = size
-  } else if (logo?.style === 'round') {
+  } else if (options.logo?.style === 'round') {
     r = size / 8
   }
   return {
@@ -56,7 +57,8 @@ function getLogoInfo(logo: BaseOptions['logo'], svgSize: number) {
     x,
     y: x,
     p,
-    r
+    r,
+    url: options.logo.url
   }
 }
 
@@ -177,8 +179,8 @@ export function toSVG(data: QRData, options?: BaseOptions): string {
   svg += `</g>`
 
   // Draw logo
-  if (options?.logo) {
-    const logo = getLogoInfo(options.logo, svgSize)
+  const logo = getLogoInfo({ options, svgSize, pixelSize })
+  if (logo) {
     if (logo.p > 0) {
       // Logo background
       const logoBgX = logo.x - logo.p
@@ -204,11 +206,11 @@ export function toSVG(data: QRData, options?: BaseOptions): string {
 
   svg += `<defs>`
 
-  if (options?.logo) {
+  if (logo) {
     svg += `<pattern id="logo_pattern" patternContentUnits="objectBoundingBox" width="1" height="1">`
     svg += `<use href="#logo_image" transform="scale(0.01)" />`
     svg += `</pattern>`
-    svg += `<image id="logo_image" href="${encodeURI(options.logo.url)}" />`
+    svg += `<image id="logo_image" href="${encodeURI(logo.url)}" width="100" height="100" />`
   }
 
   if (gradientFgColor) {
