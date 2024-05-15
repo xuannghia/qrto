@@ -1,0 +1,27 @@
+{
+  "name": "xqrcode",
+  "version": "0.0.1",
+  "description": "xQRCode - Styled QR Code Generator",
+  "author": "xuannghia",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --out-dir dist --clean --dts",
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "jsqr": "^1.4.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  }
+}
