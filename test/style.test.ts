@@ -40,7 +40,7 @@ describe('Styled QR', () => {
         }
       },
       logo: {
-        url: 'https://avatars.githubusercontent.com/u/19240171?v=4',
+        url: logoUrl,
       },
       foregroundColor: {
         type: 'linear',
