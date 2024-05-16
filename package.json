@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "QRto - Styled QR Code Generator",
   "author": "xuannghia",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuannghia/qrto.git"
+  },
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
