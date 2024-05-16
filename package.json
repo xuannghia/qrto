@@ -1,7 +1,7 @@
 {
-  "name": "xqrcode",
+  "name": "qrto",
   "version": "0.0.1",
-  "description": "xQRCode - Styled QR Code Generator",
+  "description": "QRto - Styled QR Code Generator",
   "author": "xuannghia",
   "type": "module",
   "main": "dist/index.cjs",
@@ -19,7 +19,6 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.12.7",
-    "jsqr": "^1.4.0",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
     "vitest": "^1.5.0"

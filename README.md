@@ -1,9 +1,9 @@
-# xQRCode - Styled QR Code Generator
+# QRto - Styled QR Code Generator
 
 ## Installation
 
 ```bash
-npm install xqrcode
+npm install qrto
 ```
 
 ## `toSVG`
@@ -15,9 +15,9 @@ npm install xqrcode
 
 ```javascript
 const fs = require('fs')
-const { toSVG } = require('xqrcode');
+const { toSVG } = require('qrto');
 
-const svg = toSVG("https://github.com/xuannghia/xqrcode", {
+const svg = toSVG("https://github.com/xuannghia/qrto", {
   style: 'circle',
   marker: {
     style: {
@@ -45,10 +45,10 @@ fs.writeFileSync('./qrcode.svg', svg)
 
 import React from 'react';
 
-import { toSVG } from 'xqrcode';
+import { toSVG } from 'qrto';
 
 const App = () => {
-  const svgString = toSVG("https://github.com/xuannghia/xqrcode", {
+  const svgString = toSVG("https://github.com/xuannghia/qrto", {
     style: 'circle',
     marker: {
       style: {

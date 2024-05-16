@@ -6,7 +6,7 @@ const logoUrl = 'data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkS
 
 describe('Styled QR', () => {
   it('with custom marker', async () => {
-    const svg = toSVG("https://github.com/xuannghia/xqrcode", {
+    const svg = toSVG("https://github.com/xuannghia/qrto", {
       style: 'circle',
       marker: {
         style: {
@@ -31,7 +31,7 @@ describe('Styled QR', () => {
   })
 
   it('with custom marker 2', async () => {
-    const svg = toSVG("https://github.com/xuannghia/xqrcode", {
+    const svg = toSVG("https://github.com/xuannghia/qrto", {
       style: 'round',
       marker: {
         style: 'round',
@@ -49,7 +49,7 @@ describe('Styled QR', () => {
   })
 
   it('npm style', async () => {
-    const svg = toSVG("https://github.com/xuannghia/xqrcode", {
+    const svg = toSVG("https://github.com/xuannghia/qrto", {
       style: 'circle',
       logo: {
         size: 30,
@@ -63,7 +63,7 @@ describe('Styled QR', () => {
 
 
   it('instagram style', async () => {
-    const svg = toSVG("https://github.com/xuannghia/xqrcode", {
+    const svg = toSVG("https://github.com/xuannghia/qrto", {
       style: 'circle',
       marker: {
         style: {
