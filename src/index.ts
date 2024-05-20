@@ -126,7 +126,7 @@ export function toSVG(data: QRData, options?: BaseOptions): string {
     }
   }
 
-  let svg = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 ${svgSize} ${svgSize}">`
+  let svg = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 ${svgSize} ${svgSize}" width="${size}" height="${size}">`
   // Draw the background
   svg += `<rect width="100%" height="100%" fill="${bgFill}"/>`
   
